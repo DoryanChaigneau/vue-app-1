@@ -16,9 +16,7 @@ let apiCall = function (city) {
       document.querySelector('#humidite').innerHTML = "<i class='fas fa-tint'></i>" + data.main.humidity + '%';
       // On récupère le % de vent
       document.querySelector('#vent').innerHTML = "<i class='fas fa-wind'></i>" + data.wind.speed + 'km/h';
-      // On affiche l'image en fonction de la météo
-      document.querySelector('footer').innerHTML = `<img src='http://openweathermap.org/img/w/${data.weather[0].icon}.png' alt='temps'> Meteo`;
-    })
+      })
   )
     // Si il y a une erreur une renvoie le message d'erreur
   .catch((err) => console.log('Erreur : ' + err));
