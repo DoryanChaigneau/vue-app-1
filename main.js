@@ -7,7 +7,6 @@ let apiCall = function (city) {
   fetch(url)
   .then((response) =>
     response.json().then((data) => {
-      console.log(data);
       // On récupère la ville
       document.querySelector('#ville').innerHTML = data.name;
       // On récupère la température
@@ -16,12 +15,13 @@ let apiCall = function (city) {
       document.querySelector('#humidite').innerHTML = "<i class='fas fa-tint'></i>" + data.main.humidity + '%';
       // On récupère le % de vent
       document.querySelector('#vent').innerHTML = "<i class='fas fa-wind'></i>" + data.wind.speed + 'km/h';
-      })
+      // On affiche l'image en fonction de la météo
+      document.querySelector('footer').innerHTML = `<img src='http://openweathermap.org/img/w/${data.weather[0].icon}.png' alt='temps'> Meteo`;
+  })
   )
-    // Si il y a une erreur une renvoie le message d'erreur
+  // Si il y a une erreur une renvoie le message d'erreur dans la console
   .catch((err) => console.log('Erreur : ' + err));
 };
-  
 
 // On récupère ce que l'utilisateur recherche
 document.querySelector('form').addEventListener('submit', function (e) {
