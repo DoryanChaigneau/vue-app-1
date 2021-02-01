@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
     <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
 
     <link
-        rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baD1411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-        crossorigin="anonymous" />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
 
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-
-    <link rel="stylesheet"
-          href="css/styles.css" />
-
-    <title>Météo API</title>
-</head>
-
-<body>
-
+    <title>METEO API</title>
+  </head>
+  <body>
     <div class="container">
+      <div class="row justify-content-center">
         <div class="col-12 col-sm-6 my-3">
-            <form>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="inputCity" />
-                </div>
-                <button type="submit" class="btn btn-info btn-block"> Rechercher </button>
-            </form>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="inputCity" />
+            </div>
+
+            <button type="submit" class="btn btn-info btn-block">
+              Rechercher
+            </button>
+          </form>
         </div>
 
         <div class="col-12 col-sm-6 d-flex justify-content-center my-3">
-            <div class="box-container">
-                <div id="city" class="box"></div>
-                <div id="temp" class="box"></div>
-                <div id="humidity" class="box"></div>
-                <div id="wind" class="box"></div>
-            </div>
+          <div class="box-container">
+            <div id="city" class="box"></div>
+            <div id="temp" class="box"></div>
+            <div id="humidity" class="box"></div>
+            <div id="wind" class="box"></div>
+          </div>
         </div>
+      </div>
     </div>
-    <script src="main.js"></script>
-
-</body>
+    <footer></footer>
+    <script src="app.js"></script>
+  </body>
 </html>
