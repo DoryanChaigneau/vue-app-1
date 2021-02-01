@@ -22,19 +22,19 @@ body {
   color: white;
 }
 
-#city {
+#ville {
   background-color: rgba(41, 128, 185, 0.75);
 }
 
-#temp {
+#temperature {
   background-color: rgba(43, 78, 101, 0.75);
 }
 
-#humidity {
+#humidite {
   background-color: rgba(52, 152, 219, 0.75);
 }
 
-#wind {
+#vent {
   background-color: rgba(143, 146, 154, 0.75);
 }
 
