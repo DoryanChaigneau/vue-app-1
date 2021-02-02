@@ -29,11 +29,11 @@
                 <div class="col-12 col-sm-6 d-flex justify-content-center my-3">
                     <div class="box-container">
                         <div id="ville" class="box">{{ ville }}</div>
-                        <div id="temperature" class="box">{{ temperature }}</div>
-                        <div id="humidite" class="box">{{ humidite }}</div>
-                        <div id="vent" class="box">{{ vent }}</div><br>
+                        <div id="temperature" class="box"><i class='fas fa-thermometer-half'></i>{{ temperature }}</div>
+                        <div id="humidite" class="box"><i class='fas fa-tint'></i>{{ humidite }}</div>
+                        <div id="vent" class="box"><i class='fas fa-wind'></i>{{ vent }}</div><br>
                         <div>
-                            <img :src="`http://openweathermap.org/img/w/${ icon }.png`" alt='temps'> Meteo
+                            <img :src="`http://openweathermap.org/img/w/${ icon }.png`" alt='temps'>
                         </div>
                     </div>
                 </div>
