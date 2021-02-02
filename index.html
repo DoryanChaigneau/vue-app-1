@@ -15,29 +15,35 @@
     <title>METEO API</title>
   </head>
   <body>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-sm-6 my-3">
-          <form>
-            <div class="form-group">
-              <input type="text" class="form-control" id="inputCity" />
+    <div id="app">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-6 my-3">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="inputCity" v-model="textcontent"/>
+                        </div>
+                        <button type="submit" class="btn btn-info btn-block" @click.prevent="showMeteo(textcontent)">Rechercher</button>
+                    </form>
+                </div>
+                <div class="col-12 col-sm-6 d-flex justify-content-center my-3">
+                    <div class="box-container">
+                        <div id="ville" class="box">{{ ville }}</div>
+                        <div id="temperature" class="box">{{ temperature }}</div>
+                        <div id="humidite" class="box">{{ humidite }}</div>
+                        <div id="vent" class="box">{{ vent }}</div><br>
+                        <div>
+                            <img :src="`http://openweathermap.org/img/w/${ icon }.png`" alt='temps'> Meteo
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <button type="submit" class="btn btn-info btn-block">Rechercher</button>
-          </form>
         </div>
-
-        <div class="col-12 col-sm-6 d-flex justify-content-center my-3">
-          <div class="box-container">
-            <div id="ville" class="box"></div>
-            <div id="temperature" class="box"></div>
-            <div id="humidite" class="box"></div>
-            <div id="vent" class="box"></div>
-          </div>
-        </div>
-      </div>
     </div>
     <footer></footer>
-    <script src="main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+
+  <script src="main.js"></script>
+
   </body>
 </html>
